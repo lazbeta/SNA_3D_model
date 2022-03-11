@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="http://www.x3dom.org/release/x3dom.js"></script>
+	<title>
+	Slovak National Archive
+	</title>
+	</head>
+<body>
+	<h1>
+	Slovak National Archive
+	</h1>
+	<p>
+	 <button onclick="document.getElementById('left').setAttribute('set_bind','true');">Left</button>
+    <button onclick="document.getElementById('front').setAttribute('set_bind','true');">Front </button>
+	</p>
+<x3d width="1000px" height="650px">
+<scene>
+		<Viewpoint id="left" position="-40 -8 20" orientation="0 -3.14 0 1" description="camera"></Viewpoint>
+		<Viewpoint id="front" position="-4 -8 30" orientation="0 0 0 0" description="camera"></Viewpoint>
+
+
+	<background skyColor="1 1 1"> </background>
+	
+	<directionalLight id="directional" direction='-8 2 0' on ="TRUE" intensity="0.7" shadowIntensity="0.1"> </directionalLight>
+	
+	<!--4central panels-->
+	<group DEF="4centralPanels">
+	<transform translation="0 0 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box DEF="upper" size="2 1.5 11"/>
+	</shape>
+	</transform>
+	
+	<transform translation="0 -5.75 5.6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box DEF="down" size="2 13 0.3"/>
+	</shape>
+	
+	<transform translation="0 0 -11">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box USE="down"/>
+	</shape>
+	</group>
+	
+	<transform translation="-4 0 -0.1">
+	<shape USE="4centralPanels"/>
+	</transform>
+	
+	<transform translation="-8 0 -0.1">
+	<shape USE="4centralPanels"/>
+	</transform>
+	
+	<transform translation="4 0 -0.1">
+	<shape USE="4centralPanels"/>
+	</transform>
+	
+	<!--filling of central panels-->
+	
+	<group DEF="filling4">
+	<transform translation="0 -6.5 0">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box def="filling" size="1.5 11.5 11"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="-4 0 0">
+	<shape USE="filling4"/>
+	</transform>
+	
+	<transform translation="-8 0 0">
+	<shape USE="filling4"/>
+	</transform>
+	
+	<transform translation="4 0 0">
+	<shape USE="filling4"/>
+	</transform>
+	
+	<!--between 4 panels-->
+	<group DEF="3between">
+	<transform translation="-2 -7.2 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box DEF="inbetween" size="3 10 8"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="-4 0 0">
+	<shape USE="3between"/>
+	</transform>
+	
+	<transform translation="4 0 0">
+	<shape USE="3between"/>
+	</transform>
+	
+	<!--balconies centre-->
+	<group DEF="balconies">
+	<transform translation="-2 -3 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box DEF="window" size="3 0.5 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -2.7 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box DEF="w1" size="3 0.1 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -3.3 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box USE="w1"/>
+	</shape>
+	</transform>
+	
+	
+	<transform translation="-2 -3.5 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box USE="w1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -2.5 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box USE="w1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -2.6 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box Def="C1" size="0.1 0.1 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -3.4 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box USE="C1" />
+	</shape>
+	</transform>
+	
+	<transform translation="-2.65 -3.4 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box DEF="wtable" size="1.2 0.1 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-1.35 -3.4 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box USE="wtable"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-1.35 -2.6 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box USE="wtable"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2.65 -2.6 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box DEF="wtable" size="1.2 0.1 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2.2 -3.8 4">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.545098 0 0"/>
+	</appearance>
+	<box DEF="wtable" size="3 0.5 0.1"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 -2 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="0 -4 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="0 -6 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="-4 0 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="-4 -2 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="-4 -4 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="-4 -6 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="4 0 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="4 -2 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="4 -4 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<transform translation="4 -6 0">
+	<shape USE="balconies"/>
+	</transform>
+	
+	<!--3 side panels-->
+	<group def="3sidepanes">
+	<transform translation="-9 -2.5 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box DEF="upndown" size="0.8 0.5 1.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-9 -10 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box USE="upndown" />
+	</shape>
+	</transform>
+	
+	<transform translation="-9.5 -6.25 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="0.3 8 1.5" />
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 0 -3.5">
+	<shape USE="3sidepanes"/>
+	</transform>
+	
+	<transform translation="0 0 3.5">
+	<shape USE="3sidepanes"/>
+	</transform>
+	
+	<transform translation="-4 0 0" rotation="0 -1 0 3.13">
+	<shape USE="3sidepanes"/>
+	</transform>
+	
+	<transform translation="-4 0 3.5" rotation="0 -1 0 3.13">
+	<shape USE="3sidepanes"/>
+	</transform>
+	
+	<transform translation="-4 0 -3.5" rotation="0 -1 0 3.13">
+	<shape USE="3sidepanes"/>
+	</transform>
+	
+	<!--fill side panels-->
+	<transform translation="5.15 -6.25 -0.1">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box DEF="fill" size="0.8 7.25 1.3" />
+	</shape>
+	</transform>
+	
+	<transform translation="5.15 -6.25 -3.6">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box USE="fill"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.15 -6.25 3.4">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box USE="fill"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-9 -6.25 3.5">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box USE="fill"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-9 -6.25 0">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box USE="fill"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-9 -6.25 -3.5">
+	<shape>
+	<appearance>
+	<material diffusecolor="0.545098 0 0" ambientIntensity="0.545098 0 0"/>
+	</appearance>
+	<box USE="fill"/>
+	</shape>
+	</transform>
+	
+	<!--windows side panels-->
+	 
+	<group DEF="windowssidepanels">
+	<transform translation="5.05 -2.85 4.1">
+	<shape>
+	<appearance>
+	<material diffusecolor="0 0 0"/>
+	</appearance>
+	<box DEF="framew1" size="0.6 0.1 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.05 -3.8 4.1">
+	<shape>
+	<appearance>
+	<material diffusecolor="0 0 0"/>
+	</appearance>
+	<box USE="framew1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.3 -3.325 4.1">
+	<shape>
+	<appearance>
+	<material diffusecolor="0 0 0"/>
+	</appearance>
+	<box DEF="framew2" size="0.1 0.95 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.8 -3.325 4.1">
+	<shape>
+	<appearance>
+	<material diffusecolor="0 0 0"/>
+	</appearance>
+	<box USE="framew2"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.05 -3.325 4.1">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box size="0.4 0.85 0.1"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 -2 0">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 0">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 0">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+
+	<transform translation="0 0 -1.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -2 -1.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 -1.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 -1.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+
+	<transform translation="0 0 -3.5">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -2 -3.5">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 -3.5">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 -3.5">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	<!--divii-->
+	<transform translation="0 0 -4.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -2 -4.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 -4.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 -4.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 0 -7">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -2 -7">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 -7">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 -7">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 0 -8.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -2 -8.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -4 -8.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="0 -6 -8.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 0.1">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 0.1">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 0.1">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 0.1">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 -1.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 -1.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 -1.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 -1.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 -4.8">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 -4.8">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 -4.8">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 -4.8">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 -3.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 -3.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 -3.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 -3.4">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 -6.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 -6.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 -6.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 -6.9">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -5.9 -8.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -4 -8.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 -2 -8.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	
+	<transform translation="-14.1 0 -8.3">	
+	<shape USE="windowssidepanels"/>
+	</transform>
+	<!--other side widnows side-->
+	
+	<!--side relief-->
+	<group def="THErelief">
+	<transform translation="4.85 -2.68 4.75">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="relief1" size="0.15 0.15 1.4"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -3.93 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="relief2s" size="0.15 0.15 1.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -4.7 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -5.9 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -6.7 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -7.95 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -8.7 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -9.95 4.7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relief2s" />
+	</shape>
+	</transform>
+	</group>
+	
+	<group def="relief2">
+	<transform translation="4.85 -2.68 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box  size="0.15 0.15 2" />
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -3.93 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="reliefs3s" size="0.15 0.15 2.2"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -4.7 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -5.9 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -6.7 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -7.95 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -8.7 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -9.95 1.65">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="reliefs3s"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 0 -3.5">
+	<shape use="relief2"/>
+	</transform>
+	
+	<transform translation="0 0 -9.5">
+	<shape use="THErelief"/>
+	</transform>
+	
+	<transform translation="-13.6 0 -9.5">
+	<shape use="THErelief"/>
+	</transform>
+	
+	<transform translation="-13.6 0 0">
+	<shape use="THErelief"/>
+	</transform>
+	
+	<transform translation="-13.6 0 -3.4">
+	<shape use="relief2"/>
+	</transform>
+	
+	<transform translation="-13.6 0 0.1">
+	<shape use="relief2"/>
+	</transform>
+	
+	<group def="relief3VER">
+	<transform translation="4.85 -3.305 1.3">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="II1" size="0.3 1.25 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -3.305 1.5">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="II1"size="0.3 1.25 0.1"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 -2 0">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -4 0">
+	<shape use="relief3VER"/>
+	</transform>
+
+	<transform translation="0 -6 0">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -6 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -4 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -2 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 0 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 0 -3">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -2 -3">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -4 -3">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -6 -3">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 0 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -2 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -4 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="0 -6 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<group def="relief2EVER">
+	<transform translation="4.85 -4.25 1.9">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="relieff" size="0.3 0.77 0.1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="4.85 -4.25 2.1">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="relieff"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 -2 0">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="0 -4 0">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="0 0 -4.4">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="0 -2 -4.4">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="0 -4 -4.4">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 0 0">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 0">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 -4 0">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 0 -4.2">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 -4.2">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 -4 -4.2">
+	<shape use="relief2EVER"/>
+	</transform>
+	
+	<transform translation="-13.6 0 0">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 0">
+	<shape use="relief3VER"/>
+	</transform>
+
+	<transform translation="-13.6 -4 0">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -6 0">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 0 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -4 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -6 3.4">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -6 -2.8">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -4 -2.8">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 -2.8">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 0 -2.8">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -6 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -4 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -2 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<transform translation="-13.6 -0 -6.2">
+	<shape use="relief3VER"/>
+	</transform>
+	
+	<!------------------------rings around------------------------>
+	
+	<group def="rings">
+	<transform translation="5 -12 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="ringpt1" size="2.5 2.5 0.7"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5 -12 -6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="ringpt1"/>
+	</shape>
+	</transform>
+	
+	
+	<transform translation="5 -13.1 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="2.5 0.3 12.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.6 -10.6 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="1.25 0.3 12.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="6.2 -12.5 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="0.25 0.7 12.5"/>
+	</shape>
+	</transform>
+	
+	<!--windows-->
+	<group def="windowsss">
+	<transform translation="5.5 -11.9 0">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box size="0.15 1.7 1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11 0">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box def="frammme" size="0.15 0.1 1"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -12.7 0">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box use="frammme"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.9 0.58">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box def="framme" size="0.15 1.9 0.15"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.9 -0.58">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box def="framme" size="0.15 1.9 0.15"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 0 -2">
+	<shape use="windowsss"/>
+	</transform>
+	
+	<transform translation="0 0 -4">
+	<shape use="windowsss"/>
+	</transform>
+	
+	<transform translation="0 0 4">
+	<shape use="windowsss"/>
+	</transform>
+	
+	<transform translation="0 0 2">
+	<shape use="windowsss"/>
+	</transform>
+	
+	<group def="smallwindoss">
+	<transform translation="5.5 -11.5 1">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box size="0.15 0.85 0.45"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.04 1">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box size="0.15 0.1 0.45"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.97 1">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box size="0.15 0.1 0.45"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.48 1.25">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box size="0.15 1 0.04"/>
+	</shape>
+	</transform>
+	
+	<transform translation="5.5 -11.48 0.75">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box size="0.15 1 0.04"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0 0 -2">
+	<shape use="smallwindoss"/>
+	</transform>
+	
+	<transform translation="0 0 -4">
+	<shape use="smallwindoss"/>
+	</transform>
+	
+	<transform translation="0 0 -6">
+	<shape use="smallwindoss"/>
+	</transform>
+	
+	<transform translation="0 0 2">
+	<shape use="smallwindoss"/>
+	</transform>
+	
+	<transform translation="0 0 4">
+	<shape use="smallwindoss"/>
+	</transform>
+	</group>
+	
+	<transform translation="0 -3 0">
+	<shape use="rings"/>
+	</transform>
+	
+	<transform translation="-4 0 0" rotation="0 -1 0 3.13">
+	<shape use="rings"/>
+	</transform>
+	
+	<transform translation="-4 -3 0" rotation="0 -1 0 3.13">
+	<shape use="rings"/>
+	</transform>
+	
+	<!--BASE-->
+	<transform translation="-2 -14 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="12 3.5 10.4"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-2 -16 0">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="12 1.7 10.4"/>
+	</shape>
+	</transform>
+	
+	<!--filling in the gaps-->
+	<group def="3bigbalconies">
+	<GROUP def="napolitane">
+	<group def="fillthegaps">
+	<transform translation="-6 -11.5 5">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="theGaps" size="2 1.5 1"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="4 0 0">
+	<shape use="fillthegaps"/>
+	</transform>
+	
+	<transform translation="8 0 0">
+	<shape use="fillthegaps"/>
+	</transform>
+	</group>
+	
+	<transform translation="0 0 -10">
+	<shape use="napolitane"/>
+	</transform>
+	
+	<!--"tunnels"-->
+	
+	<group def="tunnel_upper">
+	<transform translation="-6 -12.6 7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="2.5 0.5 0.5"/>
+	</shape>
+	</transform>
+	<group def="base for balconies">
+	<transform translation="-6 -11 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="Upp" size="3 1 2.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-7.5 -12 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="sidessssss" size="0.5 3 2.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-4.5 -12 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="sidessssss"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-6 -13.3 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="2.5 0.5 2.5"/>
+	</shape>
+	</transform>
+	
+	
+	</group>
+	
+	<!--windows-->
+	<group def="wondows">
+	<transform translation="-6 -12 6">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.3 0.5 1" transparency="0.1"/>
+	</appearance>
+	<box size="0.5 2 0.2"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-5.7 -12 6">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box def= "frame222" size="0.1 2 0.2"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-6.3 -12 6">
+	<shape>
+	<appearance>
+	<material diffuseColor="0 0 0"/>
+	</appearance>
+	<box use= "frame222"/>
+	</shape>
+	</transform>
+	</group>
+	
+	<transform translation="0.8 0 0">
+	<shape use="wondows"/>
+	</transform>
+	
+	<transform translation="-0.8 0 0">
+	<shape use="wondows"/>
+	</transform>
+	</group>
+	
+	<transform translation="4 0 0">
+	<shape use="tunnel_upper"/>
+	</transform>
+	
+	<transform translation="8 0 0">
+	<shape use="tunnel_upper"/>
+	</transform>
+	</group>
+	
+	<transform translation="-4 0 0" rotation="0 -1 0 3.13">
+	<shape use="3bigbalconies"/>
+	</transform>
+	
+	<!--tunnels_lower-->
+	<group def="mirror balconies">
+	<group def="balconies22">
+	<transform translation="-6 -14.5 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="Upp" size="3 1 2.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-7.5 -15.5 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box def="sidessssss" size="0.5 3 2.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-4.5 -15.5 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box use="sidessssss"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-6 -16.8 6">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="2.5 0.5 2.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-6 -16.1 7">
+	<shape>
+	<appearance>
+	<imageTexture url="https://c1.staticflickr.com/3/2689/4359587778_dd847d0930_b.jpg"/>
+	</appearance>
+	<box size="2.5 0.5 0.5"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-6 -16 6">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.2 0.1 0.1"/>
+	</appearance>
+	<box size="0.6 2 0.2"/>
+	</shape>
+	</transform>
+	
+	<transform translation="-0.8 -4 0">
+	<shape use="wondows"/>
+	</transform>
+	
+	<transform translation="0.8 -4 0">
+	<shape use="wondows"/>
+	</transform>
+	</group>
+	
+	<transform translation="8 0 0">
+	<shape use="balconies22"/>
+	</transform>
+	</group>
+	
+	<transform translation="-4 0 0" rotation="0 -1 0 3.13">
+	<shape use="mirror balconies"/>
+	</transform>
+	
+	<transform translation="-8 0 0" rotation="0 -1 0 3.13">
+	<shape use="balconies22"/>
+	</transform>
+	
+	<!--central balcony entrance-->
+	<transform translation="4 -3.5 0">
+	<shape use="base for balconies"/>
+	</transform>
+	
+	<transform translation="-2 -16 6">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.2 0.1 0.1"/>
+	</appearance>
+	<box size="3 1.8 0.2"/>
+	</shape>
+	</transform>
+	
+	<!--little hill-->
+	<transform translation="-2 -17.6 0">
+	<shape>
+	<appearance>
+	<material diffuseColor="0.7 0.9 0.4"/>
+	</appearance>
+	<cone bottomRadius="60" height="2"/>
+	</shape>
+	</transform>
+</body>
+</scene>
+</x3d>
+	
+</html>
